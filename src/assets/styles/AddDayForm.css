@@ -1,0 +1,85 @@
+* {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* form */
+form {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #fffbe7 0%, #ffe082 100%);
+    max-width: 340px;
+    margin: 40px auto;
+    justify-content: center;
+    text-align: center;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(255, 214, 0, 0.25), 0 1.5px 8px 0 #ffd60033;
+    padding: 32px 18px 24px 18px;
+    position: relative;
+    overflow: hidden;
+}
+
+form::before {
+    content: "";
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, #ffd600 0%, #fffbe7 80%);
+    opacity: 0.25;
+    z-index: 0;
+    filter: blur(8px);
+    animation: magicGlow 4s infinite alternate;
+}
+
+@keyframes magicGlow {
+    0% { opacity: 0.18; transform: scale(1);}
+    100% { opacity: 0.35; transform: scale(1.15);}
+}
+
+/* form input */
+form input {
+    margin: 16px auto;
+    width: 92%;
+    max-width: 240px;
+    height: 42px;
+    padding: 0 16px;
+    color: #222;
+    background: linear-gradient(90deg, #fffbe7 60%, #fffde7 100%);
+    border: 2px solid #ffd600;
+    border-radius: 8px;
+    font-size: 1.08rem;
+    transition: 
+        border-color 0.25s,
+        box-shadow 0.25s,
+        background 0.3s;
+    box-shadow: 0 2px 12px rgba(255, 214, 0, 0.13);
+    position: relative;
+    z-index: 1;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #ffb300;
+    background: linear-gradient(90deg, #fffbe7 60%, #ffe082 100%);
+    box-shadow: 0 0 0 4px #ffe08299, 0 2px 16px #ffd60033;
+    animation: inputMagic 0.7s;
+}
+
+@keyframes inputMagic {
+    0% { box-shadow: 0 0 0 0 #ffe08299; }
+    100% { box-shadow: 0 0 0 4px #ffe08299, 0 2px 16px #ffd60033; }
+}
+
+/* Add a subtle floating animation to the form */
+form {
+    animation: floatMagic 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatMagic {
+    0% { transform: translateY(0px);}
+    100% { transform: translateY(-8px);}
+}
