@@ -67,10 +67,3 @@ export default tseslint.config([
   },
 ])
 ```
-# StudentTimeManagment
-# StudentTimeManagment
-# StudentTimeManagment
-# StudentTimeManagment
-# StudentTimeManagment
-# StudentTimeManagment
-# StudentTimeManagment
